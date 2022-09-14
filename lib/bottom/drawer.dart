@@ -27,7 +27,7 @@ class MyDrawer extends StatelessWidget {
               height: 15,
             ),
             ListTile1(Icon(Icons.favorite), 'hello', () {
-              Navigator.of(context).pushNamed('/fav');
+              Navigator.of(context).pushNamed('/fav'); 
             })
           ],
         ),
