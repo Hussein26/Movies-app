@@ -17,7 +17,7 @@ class MyDrawer extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(
-              height: 50,
+              height: 51,
             ),
             Text(
               'My Addition list',
