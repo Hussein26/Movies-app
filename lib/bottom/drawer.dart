@@ -26,8 +26,22 @@ class MyDrawer extends StatelessWidget {
             SizedBox(
               height: 15,
             ),
-            ListTile1(Icon(Icons.favorite), 'hello', () {
-              Navigator.of(context).pushNamed('/fav');
+            ListTile1(Icon(Icons.favorite), 'My favourite Movies', () {
+              Navigator.of(context).pushNamed('/favm');
+              }),
+            Divider(
+              height: 15,
+              color: Colors.white,
+            ),
+            ListTile1(Icon(Icons.star), 'My favourite Actors', (){
+              Navigator.of(context).pushNamed('/fava');
+            }),
+            Divider(
+              height: 15,
+              color: Colors.white,
+            ),
+            ListTile1(Icon(Icons.remove_red_eye_rounded), 'Wached movies in 2022', (){
+              Navigator.of(context).pushNamed('/moft');
             })
           ],
         ),

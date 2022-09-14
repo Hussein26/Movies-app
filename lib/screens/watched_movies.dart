@@ -2,29 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:projects/shared/constant.dart';
 
 import '../data/data_list.dart';
-
 import 'detail screen.dart';
-class FavouriteMovies extends StatelessWidget {
-  const FavouriteMovies({Key? key}) : super(key: key);
+class WatchedMovies extends StatelessWidget {
+  const WatchedMovies({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar1('My favourite Movies'),
+      appBar: appBar1('Watched movies in 2022'),
       body: Container(
-        height: 670,
+        height:670,
         color: Colors.black,
         child: ListView.builder(
             scrollDirection: Axis.vertical,
-            itemCount: favouriteName.length,
+            itemCount: moviesWatchName.length,
             itemBuilder: (context, index) {
               return GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => DetailScreen(
-                          '${favouriteMoviesImage[index]}',
-                          '${favouriteName[index]}',
-                          '${describeMovie[index]}')));
+                          '${moviesWatchImage[index]}',
+                          '${moviesWatchName[index]}',
+                          '${describWatch[index]}')));
                 },
 
                 child: Column(
@@ -45,7 +44,7 @@ class FavouriteMovies extends StatelessWidget {
                                 child: SizedBox(
                                   width: double.infinity,
                                   child: Image.network(
-                                    "${favouriteMoviesImage[index]}",
+                                    "${moviesWatchImage[index]}",
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -61,7 +60,7 @@ class FavouriteMovies extends StatelessWidget {
                                   child: Padding(
                                     padding:  EdgeInsets.only(left: 12),
                                     child: Text(
-                                      '${favouriteName[index]}',
+                                      '${moviesWatchName[index]}',
                                       style: TextStyle(color: Colors.white, fontSize: 25),
                                     ),
                                   ),
@@ -80,6 +79,7 @@ class FavouriteMovies extends StatelessWidget {
               );
             }),
       ),
-    );
+      );
+
   }
 }

@@ -29,12 +29,12 @@ class DetailScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Title: ',style: TextStyle(color: Colors.white,fontSize: 25),),
+                Text('Name: ',style: TextStyle(color: Colors.white,fontSize: 25),),
                 Text('${title}',style: TextStyle(color: Colors.white,fontSize: 25),)
               ],
             ),
             SizedBox(height: 30,),
-            Text('Description',style: TextStyle(color: Colors.white,fontSize: 20),),
+            Text('Summary',style: TextStyle(color: Colors.white,fontSize: 20),),
             SizedBox(height: 18,),
             Padding(
               padding: const EdgeInsets.only(left: 15),

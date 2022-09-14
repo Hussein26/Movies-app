@@ -54,6 +54,7 @@ Container1(){
 Container2(){
   var image = List.from(imageMovie.reversed);
   var title = List.from(titleMovie.reversed);
+  var describ = List.from(descriptionMovie.reversed);
   return Container(
       width: double.infinity,
       height: 200,
@@ -65,9 +66,9 @@ Container2(){
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => DetailScreen(
-                      '${imageMovie[index]}',
-                      '${titleMovie[index]}',
-                      '${descriptionMovie[index]}'),
+                      '${image[index]}',
+                      '${title[index]}',
+                      '${describ[index]}'),
                 ));
               },
 
@@ -102,6 +103,77 @@ Container2(){
             );
           }));
 }
+Container3(){
+  return Container(
+    height: 560,
+    color: Colors.black,
+    child: ListView.builder(
+        scrollDirection: Axis.vertical,
+        itemCount: titleMovie.length,
+        itemBuilder: (context, index) {
+          return GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => DetailScreen(
+                      '${imageMovie[index]}',
+                      '${titleMovie[index]}',
+                      '${descriptionMovie[index]}')));
+            },
+
+            child: Column(
+              children: [
+                SizedBox(height: 18,),
+                Container(
+                  height: 200,
+                  width: double.infinity,
+
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15)
+                    ),
+                    child: Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(25),
+                            child: SizedBox(
+                              width: double.infinity,
+                              child: Image.network(
+                                "${imageMovie[index]}",
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            height: 30,
+                            child: Container(
+                              width: 400,
+                              height: 30,
+                              decoration: BoxDecoration(
+                                  color: Colors.black38
+                              ),
+                              child: Padding(
+                                padding:  EdgeInsets.only(left: 12),
+                                child: Text(
+                                  '${titleMovie[index]}',
+                                  style: TextStyle(color: Colors.white, fontSize: 25),
+                                ),
+                              ),
+                            ),
+                            bottom: 1,
+                          )
+                        ]),
+
+                  ),
+
+                ),
+                SizedBox(height: 5,),
+              ],
+
+            ),
+          );
+        }),
+  );
+}
 ListTile1(Icon x , String y, VoidCallback z){
   return ListTile(
     leading: IconButton(
@@ -111,7 +183,14 @@ ListTile1(Icon x , String y, VoidCallback z){
     ),
     title: Text(
       y,
-      style: TextStyle(color: Colors.white,fontSize: 25),
+      style: TextStyle(color: Colors.white,fontSize: 20),
     ),
+  );
+}
+appBar1(String x){
+  return AppBar(
+    title: Text(x,style: TextStyle(fontSize: 20,color: Colors.white),),
+    centerTitle: true,
+    backgroundColor: Colors.black,
   );
 }

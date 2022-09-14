@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:projects/screens/favourite_actors.dart';
 import 'package:projects/screens/favourite_movies.dart';
+import 'package:projects/screens/watched_movies.dart';
 
 
 import 'bottom/bottom_widget.dart';
@@ -17,7 +19,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes:
       {
-        '/fav' : (context) => FavouriteMovies()
+        '/favm' : (context) => FavouriteMovies(),
+        '/fava' : (context) => FavouriteActors(),
+        '/moft' : (context) => WatchedMovies(),
       },
       home: BottomNavBarWidget(),
     );
