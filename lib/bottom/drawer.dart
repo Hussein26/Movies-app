@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:projects/screens/favourite_movies.dart';
+
 
 import '../shared/constant.dart';
 
@@ -27,7 +27,7 @@ class MyDrawer extends StatelessWidget {
               height: 15,
             ),
             ListTile1(Icon(Icons.favorite), 'hello', () {
-              Navigator.of(context).pushNamed('/fav'); 
+              Navigator.of(context).pushNamed('/fav');
             })
           ],
         ),
