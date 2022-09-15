@@ -36,7 +36,7 @@ cleanText(){
                         onPressed: (){
                           cleanText();
                         },
-                        icon: Icon(Icons.clear_rounded),
+                        icon: Icon(Icons.clear_rounded,color: Colors.black,),
                       ),
 
                     ),
