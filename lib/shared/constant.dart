@@ -1,11 +1,14 @@
+
+
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../data/data_list.dart';
 import '../screens/detail screen.dart';
 Container1(){
   return Container(
-      width: double.infinity,
-      height: 200,
+    height: 300,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: titleMovie.length,
@@ -57,7 +60,7 @@ Container2(){
   var describ = List.from(descriptionMovie.reversed);
   return Container(
       width: double.infinity,
-      height: 200,
+      height: 300,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: titleMovie.length,
@@ -105,7 +108,7 @@ Container2(){
 }
 Container3(){
   return Container(
-    height: 560,
+    height:720,
     color: Colors.black,
     child: ListView.builder(
         scrollDirection: Axis.vertical,
@@ -124,7 +127,7 @@ Container3(){
               children: [
                 SizedBox(height: 18,),
                 Container(
-                  height: 200,
+                  height: MediaQuery.of(context).size.height*.25,
                   width: double.infinity,
 
                   child: Container(
@@ -146,8 +149,8 @@ Container3(){
                           Positioned(
                             height: 30,
                             child: Container(
-                              width: 400,
-                              height: 30,
+                              width: MediaQuery.of(context).size.width,
+                              height: 35,
                               decoration: BoxDecoration(
                                   color: Colors.black38
                               ),

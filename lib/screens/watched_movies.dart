@@ -11,7 +11,7 @@ class WatchedMovies extends StatelessWidget {
     return Scaffold(
       appBar: appBar1('Watched movies in 2022'),
       body: Container(
-        height:670,
+        height:MediaQuery.of(context).size.height,
         color: Colors.black,
         child: ListView.builder(
             scrollDirection: Axis.vertical,
@@ -30,7 +30,7 @@ class WatchedMovies extends StatelessWidget {
                   children: [
                     SizedBox(height: 18,),
                     Container(
-                      height: 200,
+                      height: 400,
                       width: double.infinity,
 
                       child: Container(
@@ -52,7 +52,7 @@ class WatchedMovies extends StatelessWidget {
                               Positioned(
                                 height: 30,
                                 child: Container(
-                                  width: 400,
+                                  width: MediaQuery.of(context).size.width,
                                   height: 30,
                                   decoration: BoxDecoration(
                                       color: Colors.black38

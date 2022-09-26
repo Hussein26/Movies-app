@@ -12,7 +12,7 @@ class FavouriteMovies extends StatelessWidget {
     return Scaffold(
       appBar: appBar1('My favourite Movies'),
       body: Container(
-        height: 670,
+        height: 830,
         color: Colors.black,
         child: ListView.builder(
             scrollDirection: Axis.vertical,
@@ -31,7 +31,7 @@ class FavouriteMovies extends StatelessWidget {
                   children: [
                     SizedBox(height: 18,),
                     Container(
-                      height: 200,
+                      height: MediaQuery.of(context).size.height*.33,
                       width: double.infinity,
 
                       child: Container(
@@ -53,8 +53,8 @@ class FavouriteMovies extends StatelessWidget {
                               Positioned(
                                 height: 30,
                                 child: Container(
-                                  width: 400,
-                                  height: 30,
+                                  width: MediaQuery.of(context).size.width,
+
                                   decoration: BoxDecoration(
                                       color: Colors.black38
                                   ),
